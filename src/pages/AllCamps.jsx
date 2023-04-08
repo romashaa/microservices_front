@@ -1,7 +1,7 @@
 import React from 'react';
 import FooterComponent from "../components/FooterComponent";
 import marshmallow from '../images/marshmallow.jpg'
-import {Button} from "react-bootstrap";
+import {Button, Col, Form} from "react-bootstrap";
 import CampList from "../components/CampList";
 
 const AllCamps = () => {
@@ -29,7 +29,13 @@ const AllCamps = () => {
                 </div>
             </div>
 
-            <CampList/>
+            <Form style={{width: "100%"}}>
+                <Col md={12} lg={12} xs={12} xl={12}>
+                    <CampList/>/>
+
+                </Col>
+            </Form>
+
             <FooterComponent/>
         </div>
     );

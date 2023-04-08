@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import CampItem from "./CampItem";
+import {Row} from "react-bootstrap";
 
 const CampList = () => {
     const [camps, setCamps] = useState([])
@@ -62,8 +63,12 @@ const CampList = () => {
         setCamps(campList)
     }, [])
     return (
+        <Row className="d-flex m-auto ">
+            {
         camps.map(camp=> <CampItem key = {camp.name} camp = {camp}/>)
 
+            }
+        </Row>
     );
 };
 
